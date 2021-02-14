@@ -23,6 +23,10 @@
     i+i{
         margin-left: 15px;
     }
+
+    i:hover{
+        color: $naranja;
+    }
 }
 
 
@@ -36,6 +40,31 @@
     }
 }
 
+@mixin nav-menu-a{
+    padding: 8px;
+    display: block;
+    position: relative;
+    color: $blanco;
+    transition: 0.3s;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: $font-body;
+    transition: ease-in-out 0.2s;
+}
+
+@mixin nav-menu-secundary{
+    position: fixed;
+    top: 50px;
+    right: 15px;
+    left: 15px;
+    bottom: 15px;
+    max-height: 250px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+    transition: ease-in-out 0.2s;
+    overflow-y: hidden;
+}
+
 
 // MOVIL //
 .nav-menu{   
@@ -43,24 +72,11 @@
     @include nav-menu-main;
     
     a{
-        padding: 8px;
-        display: block;
-        position: relative;
-        color: $blanco;
-        transition: 0.3s;
-        font-size: 15px;
-        font-weight: 500;
-        font-family: $font-body;
-        transition: ease-in-out 0.2s;
-        
-        
+        @include nav-menu-a;        
         h1{
-            color: $naranja;
-            :hover{
-                color: $blanco;
-            }
-        }
-        
+            color: $naranja;}
+        h1:hover{
+            color: $blanco;}
     }
     
     button{
@@ -75,17 +91,8 @@
     
     
     .nav-menu{
-        position: fixed;
-        top: 50px;
-        right: 15px;
-        left: 15px;
-        bottom: 15px;
-        max-height: 250px;
-        background-color: rgba(0, 0, 0, 0.4);
-        border-radius: 25px;
-        transition: ease-in-out 0.2s;
-        overflow-y: hidden;
-        
+
+     @include nav-menu-secundary;        
 
         ul li{
             text-align: center;
@@ -98,7 +105,7 @@
 }
 
 //Escritorio//
-@media (min-width: 769px){
+@media (min-width: 991px){
     .nav-menu{
         .nav-menu{
             max-height: 50px;

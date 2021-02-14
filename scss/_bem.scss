@@ -1,3 +1,51 @@
-.color__white{
-    color: white;
+//Slides//
+.color__blanco{
+    color: $blanco;
 }
+
+.color__blanco:hover{
+    color: grey;
+}
+
+.color__naranja{
+    color: $color-letra;
+}
+
+.color__naranja:hover{
+    color: $naranja;
+}
+
+
+//About//
+.content{
+    padding-top: 12px;
+    width: 90%;
+    padding: 8px;
+    text-align: center;
+    position: relative;
+
+    @media (min-width: 991px) {
+        .content{
+            height: 350px;
+        }
+    }
+
+    @media (max-width: 990px){
+        .content{
+            height: 500px;
+        }
+    }
+}
+
+
+
+.content__texto:hover{
+    color: grey;
+}
+
+
+.content__lista{
+    list-style: none;
+}
+
+
