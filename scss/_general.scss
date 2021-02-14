@@ -1,0 +1,21 @@
+// GENERAL.CFG //
+
+
+body {
+    font-family: $font-body;
+    color: $color-letra ;
+}
+
+a{
+    color: $color-a;
+    
+    a:hover{
+        color: $color-hov;
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-h;
+    color: $naranja;
+}

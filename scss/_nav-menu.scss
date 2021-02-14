@@ -1,0 +1,115 @@
+// MENU NAVEGACION //
+
+
+@mixin topbar-main{
+    padding: 0;
+    font-size: 15px;
+    height: 50px;
+    transition: all 0.5s;
+    color: $blanco;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+//BARRA TOP//
+
+#topbar{
+
+    @include topbar-main;
+        
+    .i{
+        color: $color-a;
+    }
+    
+    i+i{
+        margin-left: 15px;
+    }
+
+    i:hover{
+        color: $naranja;
+    }
+}
+
+
+
+
+@mixin nav-menu-main{
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+@mixin nav-menu-a{
+    padding: 8px;
+    display: block;
+    position: relative;
+    color: $blanco;
+    transition: 0.3s;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: $font-body;
+    transition: ease-in-out 0.2s;
+}
+
+@mixin nav-menu-secundary{
+    position: fixed;
+    top: 50px;
+    right: 15px;
+    left: 15px;
+    bottom: 15px;
+    max-height: 250px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 25px;
+    transition: ease-in-out 0.2s;
+    overflow-y: hidden;
+}
+
+
+// MOVIL //
+.nav-menu{   
+
+    @include nav-menu-main;
+    
+    a{
+        @include nav-menu-a;        
+        h1{
+            color: $naranja;}
+        h1:hover{
+            color: $blanco;}
+    }
+    
+    button{
+        position: static;
+        color: $blanco;
+        
+        :hover{
+            color: $naranja;
+        }
+    }
+    
+    
+    
+    .nav-menu{
+
+     @include nav-menu-secundary;        
+
+        ul li{
+            text-align: center;
+            
+            :hover{
+                color: $naranja;
+            }
+        }
+    }
+}
+
+//Escritorio//
+@media (min-width: 991px){
+    .nav-menu{
+        .nav-menu{
+            max-height: 50px;
+        } 
+    }
+}
+
