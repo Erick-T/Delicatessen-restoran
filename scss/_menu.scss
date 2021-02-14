@@ -1,3 +1,5 @@
+@import 'contact';
+
 @mixin menu__{
     padding: 0;
     margin: 0 auto 0 auto;
@@ -15,7 +17,7 @@
     color: #444444;
     margin: 0 3px 10px 3px;
     transition: all ease-in-out 0.3s;
-    background: #fff;
+    background: $blanco;
     border: 2px solid #ffb03b;
     border-radius: 50px;
 }
@@ -37,8 +39,8 @@
      right: 0;
      top: -4px;
      z-index: 1;
-     color: #dad8d4;
-     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+     color: $bl-gr;
+     font-family: $arial-helv-ss;
 }
 
 @mixin menu__content-a{
@@ -47,12 +49,12 @@
     position: relative;
     z-index: 3;
     font-weight: 700;
-    color: #ff9b08;
+    color: $mostaza;
 }
 
 
 @mixin menu__content-span{
-    background: #fff;
+    background: $blanco;
     position: relative;
     z-index: 3;
     padding: 0 10px;
@@ -60,10 +62,10 @@
 }
 
 @mixin menu__ingredientes{
-    font-style: italic;
+    font-style: $ita;
     font-size: 14px;
-    font-family: "Comic Neue", sans-serif;
-    color: #948c81;
+    font-family: $comic9;
+    color: $gris-rari;
 }
 
 
@@ -76,8 +78,7 @@
         }
 
         li:hover, li.todo{
-            color: #fff;
-            background: #ffb03b;
+            @include hover-nar-bla;
         }
         li:last-child{
             margin-right: 0;
