@@ -1,0 +1,67 @@
+@mixin info__{
+    background: $blanco;
+}
+
+@mixin info__wrap{
+    box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+@mixin info__i{
+    font-size: 20px;
+    color: $color-a;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: $casi-blanco;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin info__h4{
+    padding: 0 0 0 60px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: $gris;
+    font-family: $font-body;
+}
+
+@mixin info__p{
+    padding: 0 0 0 10px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: $gris-ceta;
+}
+
+@mixin hover-nar-bla {
+    background: $color-naranja-a;
+    color: $blanco;
+}
+
+#contact{
+    margin-bottom: 12px;
+}
+
+.info{
+    @include info__;
+
+    .info-wrap{
+        @include info__wrap;
+
+        i{ 
+            @include info__i;
+        }
+
+        p{
+            @include info__p;
+        }
+
+        h4{
+            @include info__h4;
+        }
+    }
+}
