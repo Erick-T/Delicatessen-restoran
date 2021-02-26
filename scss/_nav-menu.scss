@@ -1,13 +1,10 @@
-// MENU NAVEGACION //
-
-
 @mixin topbar-main{
     padding: 0;
     font-size: 15px;
     height: 50px;
     transition: all 0.5s;
     color: $blanco;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: $bg-black-09;
 }
 
 //BARRA TOP//
@@ -31,6 +28,7 @@
 
 
 
+// MENU NAVEGACION //
 
 @mixin nav-menu-main{
     *{
@@ -59,7 +57,7 @@
     left: 15px;
     bottom: 15px;
     max-height: 250px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: $bg-black-04;
     border-radius: 25px;
     transition: ease-in-out 0.2s;
     overflow-y: hidden;
@@ -82,6 +80,8 @@
     button{
         position: static;
         color: $blanco;
+        padding-right: 8px;
+        outline: none;
         
         :hover{
             color: $naranja;
@@ -92,7 +92,7 @@
     
     .nav-menu{
 
-     @include nav-menu-secundary;        
+     @include nav-menu-secundary;      
 
         ul li{
             text-align: center;
@@ -105,6 +105,21 @@
 }
 
 //Escritorio//
+@media (max-width: 990px) { 
+    .nav-menu{
+        background-color: $bg-black-09;
+        border-radius: 10px;
+        .nav-menu{
+            position: fixed;
+            top: 65px;
+            right: 15px;
+            left: 15px;
+            bottom: 15px;
+            max-height: 250px;
+        }
+    }
+}
+
 @media (min-width: 991px){
     .nav-menu{
         .nav-menu{
@@ -112,4 +127,6 @@
         } 
     }
 }
+
+
 
