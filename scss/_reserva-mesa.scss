@@ -1,0 +1,12 @@
+@mixin boton-naranja {
+    background: $color-a;
+    border: 0;
+    padding: 10px 24px;
+    color: $blanco;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.btn-ttc{
+    @include boton-naranja;    
+}
