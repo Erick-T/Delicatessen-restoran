@@ -61,9 +61,11 @@
 
         a{
             @include footer__social__a;
+
         }
         a:hover{
             background: $naranja;
         }
+        
     }
 }
