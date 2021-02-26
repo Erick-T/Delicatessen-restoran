@@ -36,7 +36,6 @@ h1, h2, h3, h4, h5, h6 {
 .content {
   padding-top: 12px;
   width: 90%;
-  padding: 8px;
   text-align: center;
   position: relative;
   margin-bottom: 12px;
@@ -69,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: white;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: black;
 }
 
 #topbar .i {
@@ -115,6 +114,8 @@ h1, h2, h3, h4, h5, h6 {
 .nav-menu button {
   position: static;
   color: white;
+  padding-right: 8px;
+  outline: none;
 }
 
 .nav-menu button :hover {
@@ -141,6 +142,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-menu .nav-menu ul li :hover {
   color: #ffb03b;
+}
+
+@media (max-width: 990px) {
+  .nav-menu {
+    background-color: black;
+    border-radius: 10px;
+  }
+  .nav-menu .nav-menu {
+    position: fixed;
+    top: 65px;
+    right: 15px;
+    left: 15px;
+    bottom: 15px;
+    max-height: 250px;
+  }
 }
 
 @media (min-width: 991px) {
@@ -437,5 +453,15 @@ h1, h2, h3, h4, h5, h6 {
 
 #footer .social-links a:hover {
   background: #ffb03b;
+}
+
+.btn-ttc {
+  background: #ffb03b;
+  border: 0;
+  padding: 10px 24px;
+  color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
 }
 /*# sourceMappingURL=style.css.map */
